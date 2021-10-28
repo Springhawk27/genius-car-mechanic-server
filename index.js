@@ -1,4 +1,3 @@
-// db user - geniuscar ... pass - qhfQs96DpM100nHi
 // step 1 = require or import express
 const express = require('express');
 // step 6 - require mongodb
@@ -49,7 +48,7 @@ async function run() {
         const servicesCollection = database.collection('services');
 
 
-        // GET API
+        // GET API -  all services
         app.get('/services', async (req, res) => {
             const cursor = servicesCollection.find({});
             const services = await cursor.toArray();
